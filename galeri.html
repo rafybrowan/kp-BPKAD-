@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri - BPKAD Rokan Hulu</title>
+  <link rel="stylesheet" href="beranda.css" />
+  <link rel="stylesheet" href="tentangkami.css" />
+  <link rel="stylesheet" href="galeri.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="logo-box">
+          <img src="gambar/Rohul.png" alt="Logo" class="logo-img" />
+        </div>
+        <div class="brand-text-stack">
+          <span class="brand-text">BPKAD ROKAN HULU</span>
+          <span class="brand-tagline">Badan Pengelola keuangan dan Aset Daerah</span>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="beranda.html">Beranda</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Profile <span class="arrow">&#9660;</span></a>
+            <ul class="dropdown">
+              <li><a href="tentangkami.html">Tentang Kami</a></li>
+              <li><a href="sotk.html">SOTK</a></li>
+              <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="data.html">Data</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Layanan <span class="arrow">&#9660;</span></a>
+            <ul class="dropdown">
+              <li><a href="l_ppid.html">Layanan PPID</a></li>
+              <li><a href="l_lapor.html">Layanan Lapor</a></li>
+              <li><a href="l_mediacenter.html">Layanan Media Center</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active"><a href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a href="informasi.html">Informasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="galeri-main">
+
+    <!-- Hero Header -->
+    <div class="galeri-hero">
+      <div class="container">
+        <h1 class="galeri-hero-title">Galeri</h1>
+        <p class="galeri-hero-desc">Dokumentasi kegiatan dan momen BPKAD Kabupaten Rokan Hulu</p>
+      </div>
+    </div>
+
+    <div class="container galeri-wrap">
+
+      <!-- Filter Tabs -->
+      <div class="galeri-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Kategori galeri">
+          <span class="filter-btn active">Semua</span>
+          <span class="filter-btn">&#128247; Gambar</span>
+          <span class="filter-btn">&#127909; Video</span>
+        </div>
+        <span class="galeri-count">8 Item</span>
+      </div>
+
+      <!-- Grid Galeri -->
+      <div class="galeri-grid" id="galeriGrid">
+
+        <div class="galeri-card" data-type="gambar">
+          <div class="card-media">
+            <img src="gambar/118a828f-8c17-45fe-8c15-92838524e173.jpeg" alt="Gambar Galeri 1" />
+          </div>
+          <div class="card-info">
+            <span class="card-tag gambar-tag">Foto</span>
+            <span class="card-caption">Kegiatan BPKAD</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="gambar">
+          <div class="card-media">
+            <img src="gambar/1778081408254724-0.jpg" alt="Gambar Galeri 2" />
+          </div>
+          <div class="card-info">
+            <span class="card-tag gambar-tag">Foto</span>
+            <span class="card-caption">Pelayanan Publik</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="video">
+          <div class="card-media video-card">
+            <img src="gambar/d1g54pvjvz4s558.jpeg" alt="Video 1" />
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag video-tag">Video</span>
+            <span class="card-caption">Sosialisasi Keuangan</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="video">
+          <div class="card-media video-card">
+            <img src="gambar/foto orang kantor.jpg" alt="Video 2" />
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag video-tag">Video</span>
+            <span class="card-caption">Rapat Koordinasi</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="gambar">
+          <div class="card-media">
+            <img src="gambar/IMG_20220224_171028.jpg" alt="Gambar Galeri 3" />
+          </div>
+          <div class="card-info">
+            <span class="card-tag gambar-tag">Foto</span>
+            <span class="card-caption">Kantor BPKAD</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="gambar">
+          <div class="card-media">
+            <img src="gambar/IMG-20220224-WA0006.jpg" alt="Gambar Galeri 4" />
+          </div>
+          <div class="card-info">
+            <span class="card-tag gambar-tag">Foto</span>
+            <span class="card-caption">Dokumentasi Lapangan</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="video">
+          <div class="card-media video-card">
+            <img src="gambar/rokan-hulu-rombongan-pawai-yang-dit79.webp" alt="Video 3" />
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag video-tag">Video</span>
+            <span class="card-caption">Acara Daerah</span>
+          </div>
+        </div>
+
+        <div class="galeri-card" data-type="video">
+          <div class="card-media video-card">
+            <img src="gambar/gambar kantor rokan hulu.webp" alt="Video 4" />
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag video-tag">Video</span>
+            <span class="card-caption">Profil BPKAD</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand">
+            <div class="logo-box footer-logo">
+              <img src="gambar/Rohul.png" alt="Logo Footer" class="logo-img" />
+            </div>
+            <div class="brand-text-stack">
+              <span class="brand-text">BPKAD ROKAN HULU</span>
+              <span class="brand-tagline">Badan Pengelola Keuangan dan Aset Daerah</span>
+            </div>
+          </div>
+          <p class="footer-desc">Mewujudkan tata kelola keuangan dan aset daerah yang transparan, akuntabel, dan profesional untuk kesejahteraan masyarakat Rokan Hulu.</p>
+        </div>
+        <!-- Kolom 2: Navigasi -->
+        <div class="footer-nav-col">
+          <div class="footer-link-group">
+            <span class="footer-link-group-title">Navigasi</span>
+            <div class="footer-links">
+              <a href="beranda.html">Beranda</a>
+              <a href="tentangkami.html">Tentang Kami</a>
+              <a href="sotk.html">SOTK</a>
+              <a href="kontak.html">Kontak</a>
+              <a href="data.html">Data</a>
+            </div>
+          </div>
+          <div class="footer-link-group">
+            <span class="footer-link-group-title">Layanan</span>
+            <div class="footer-links">
+              <a href="l_ppid.html">Layanan PPID</a>
+              <a href="l_lapor.html">Layanan Lapor</a>
+              <a href="l_mediacenter.html">Media Center</a>
+              <a href="galeri.html">Galeri</a>
+              <a href="informasi.html">Informasi</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-social-col">
+          <h3 class="footer-heading">Ikuti Kami</h3>
+          <p class="footer-social-desc">Tetap terhubung melalui media sosial resmi kami.</p>
+          <div class="social-icons">
+            <a href="#" class="social-link" title="Facebook">FB</a>
+            <a href="#" class="social-link" title="Instagram">IG</a>
+            <a href="#" class="social-link" title="Twitter">TW</a>
+            <a href="#" class="social-link" title="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BPKAD Kabupaten Rokan Hulu. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

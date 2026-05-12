@@ -1,0 +1,268 @@
+/* ===========================
+   GALERI - CSS
+   (Extends beranda.css)
+=========================== */
+
+/* ===== MAIN ===== */
+.galeri-main {
+  background: var(--gray-soft);
+  min-height: calc(100vh - var(--nav-height) - 80px);
+}
+
+/* ===========================
+   HERO HEADER
+=========================== */
+.galeri-hero {
+  background: var(--gradient-navbar);
+  padding: 52px 0 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.galeri-hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.galeri-hero-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.galeri-hero-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ===== LAYOUT ===== */
+.galeri-wrap {
+  padding-top: 36px;
+  padding-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== TOOLBAR ===== */
+.galeri-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 100px;
+  border: 1.5px solid var(--gray-border);
+  background: var(--white);
+  color: var(--blue-dark);
+  cursor: default;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-btn:hover {
+  background: var(--blue-pale);
+  border-color: var(--blue-lighter);
+  color: var(--blue-primary);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--gradient-navbar);
+  border-color: transparent;
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.3);
+}
+
+.galeri-count {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+  background: var(--blue-pale);
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+/* ===========================
+   GALERI GRID
+=========================== */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.galeri-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.galeri-card:hover {
+  box-shadow: 0 12px 32px rgba(21, 101, 192, 0.12);
+  transform: translateY(-5px);
+}
+
+/* Media area */
+.card-media {
+  width: 100%;
+  height: 220px;
+  background: var(--blue-pale);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.galeri-card:hover .card-media img {
+  transform: scale(1.06);
+}
+
+/* Video overlay */
+.video-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 71, 161, 0.2);
+  transition: background 0.3s ease;
+}
+
+.galeri-card:hover .video-card::after {
+  background: rgba(13, 71, 161, 0.1);
+}
+
+.play-btn {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(21, 101, 192, 0.85);
+  color: var(--white);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.galeri-card:hover .play-btn {
+  background: var(--blue-primary);
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+/* Card info bar */
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--gray-border);
+}
+
+.card-tag {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.gambar-tag {
+  background: var(--blue-pale);
+  color: var(--blue-primary);
+  border: 1px solid var(--gray-border);
+}
+
+.video-tag {
+  background: rgba(21, 101, 192, 0.12);
+  color: var(--blue-dark);
+  border: 1px solid var(--gray-border);
+}
+
+.card-caption {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 860px) {
+  .galeri-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeri-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-media { height: 200px; }
+
+  .galeri-hero {
+    padding: 40px 0 36px;
+  }
+
+  .galeri-hero-title {
+    font-size: 1.5rem;
+  }
+}

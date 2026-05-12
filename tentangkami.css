@@ -1,0 +1,207 @@
+/* ===========================
+   TENTANG KAMI - CSS
+   (Extends beranda.css)
+=========================== */
+
+.dropdown .active-link {
+  background: var(--blue-pale);
+  color: var(--blue-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ===== MAIN ===== */
+.tentang-main {
+  background: var(--gray-soft);
+  min-height: calc(100vh - var(--nav-height) - 80px);
+}
+
+/* ===========================
+   HERO HEADER
+=========================== */
+.tentang-hero {
+  background: var(--gradient-navbar);
+  padding: 52px 0 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tentang-hero::before {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  right: -10%;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.tentang-hero-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.tentang-hero-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ===== LAYOUT ===== */
+.tentang-wrap {
+  padding-top: 40px;
+  padding-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===== GAMBAR UTAMA ===== */
+.main-image-box {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1.5px solid var(--gray-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.main-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== CONTENT CARD ===== */
+.content-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(21, 101, 192, 0.1);
+}
+
+.content-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 28px;
+  background: var(--blue-pale);
+  border-bottom: 2px solid var(--gray-border);
+}
+
+.content-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.content-card-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--blue-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.content-card-body {
+  padding: 28px 28px;
+}
+
+.content-card-body p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--gray-text);
+  line-height: 1.85;
+}
+
+.content-card-body p + p {
+  margin-top: 14px;
+}
+
+/* ===== VISI MISI GRID ===== */
+.visimisi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.visi-card .content-card-header {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.misi-card .content-card-header {
+  background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+}
+
+.visi-card .content-card-body p,
+.misi-card .content-card-body p {
+  font-weight: 500;
+  color: var(--blue-dark);
+  font-size: 0.93rem;
+}
+
+/* ===== SECTION LABEL BOX (legacy support) ===== */
+.section-label-box {
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border: 2px solid var(--blue-primary);
+  border-radius: var(--radius-sm);
+  padding: 12px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  align-self: center;
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blue-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 860px) {
+  .visimisi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tentang-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-image-box {
+    height: 200px;
+  }
+
+  .content-card-body {
+    padding: 20px;
+  }
+
+  .tentang-hero {
+    padding: 40px 0 36px;
+  }
+
+  .tentang-hero-title {
+    font-size: 1.5rem;
+  }
+}
